@@ -10,7 +10,7 @@ jobs:
       - run: |
             npm i react-scripts --save-dev
             npm run build
-            aws s3api list-buckets --query 'Buckets[].Name'
+            aws s3 cp --recursive ./build s3://reactnd-contacts-complete
 workflows:
   awsTestFlow:
     jobs:
