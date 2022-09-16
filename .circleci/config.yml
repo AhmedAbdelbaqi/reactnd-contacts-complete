@@ -9,7 +9,7 @@ jobs:
       - checkout 
       - run: |
             aws s3api list-buckets --query 'Buckets[].Name'
-workflow:
+workflows:
   awsTestFlow:
     jobs:
       - Deployaws
