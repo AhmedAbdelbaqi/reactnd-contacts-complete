@@ -8,7 +8,8 @@ jobs:
     steps:
       - checkout 
       - run: |
-            sudo npm run build
+            npm i react-scripts --save-dev
+            npm run build
             aws s3api list-buckets --query 'Buckets[].Name'
 workflows:
   awsTestFlow:
